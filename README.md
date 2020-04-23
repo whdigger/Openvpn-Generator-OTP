@@ -32,3 +32,8 @@ Used only script, who create daemon process
 ```
 sudo ./wrapper.sh config_name username password base32_secret_key
 ```
+
+Other
+------------
+For Mac
+https://ifritltd.com/2018/01/15/automating-vpn-connection-when-using-multifactor-authentication-with-tunnelblick-on-macos/
