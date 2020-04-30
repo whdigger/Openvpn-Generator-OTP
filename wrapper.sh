@@ -22,7 +22,7 @@ _ssec=2
 
 [[ ! -f ${_conf} ]] && echo -e "\n${_conf} configuration file not exist.\n" && exit -1
 
-[[ -f /proc/$(cat ${_writepid})/status ]] && echo -e "\nProcess exist." && exit -1
+[[ -f ${_writepid} && -f /proc/$(cat ${_writepid})/status ]] && echo -e "\nProcess exist." && exit -1
 
 /usr/bin/expect <<EOD
 spawn openvpn --cd ${_path} --ping 10 --ping-restart 30 --log /var/log/openvpn.${_name}.log --script-security ${_ssec} --config ${_conf} --writepid ${_writepid} --auth-user-pass --daemon ${_daemon}
