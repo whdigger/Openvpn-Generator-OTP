@@ -32,6 +32,8 @@ Environment="OPENVPN_CONFIG_NAME=${_config_name}"
 Type=forking
 ExecStart=/usr/bin/openvpn_wrapper
 PIDFile=/run/openvpn@%i.pid
+Restart=always
+RestartSec=30
 
 [Install]
 WantedBy=multi-user.target
