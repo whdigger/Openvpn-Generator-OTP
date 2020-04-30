@@ -25,7 +25,7 @@ _ssec=2
 [[ -f /proc/$(cat ${_writepid})/status ]] && echo -e "\nProcess exist." && exit -1
 
 /usr/bin/expect <<EOD
-spawn openvpn --cd ${_path} --script-security ${_ssec} --config ${_conf} --writepid ${_writepid} --auth-user-pass --daemon ${_daemon}
+spawn openvpn --cd ${_path} --ping 10 --ping-restart 30 --script-security ${_ssec} --config ${_conf} --writepid ${_writepid} --auth-user-pass --daemon ${_daemon}
 
 expect "${_expect_user}" {send -- "${_user}\r"}
 expect "${_expect_password}" {send -- "${_password}\r"}
