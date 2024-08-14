@@ -4,6 +4,7 @@ Create systemd unit for automatic up vpn service without enter username password
 Getting started
 ------------
 To use it automatically, you need to install dependencies and create a service, which are described in the dependencies and installation section
+To get the base32_secret_key for otp you can use this method https://github.com/krissrex/google-authenticator-exporter
 
 Dependency
 -----------
