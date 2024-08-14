@@ -4,7 +4,6 @@ _config_name=$1
 _user=$2
 _password=$3
 _key=$4
-_script=openvpn_wrapper.sh
 _conf=/etc/openvpn/${_config_name}.conf
 
 [[ $(id -u) != 0 ]] && echo -e "\nNeed to be root!" && exit -1

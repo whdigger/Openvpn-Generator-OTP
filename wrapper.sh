@@ -7,7 +7,7 @@ _key=${OPENVPN_OTPKEY:-$4}
 
 _expect_user=${OPENVPN_EXPECT_USER:-"Enter Auth Username*"}
 _expect_password=${OPENVPN_EXPECT_PASSWORD:-"Enter Auth Password*"}
-_expect_otpkey=${OPENVPN_EXPECT_OTPKEY:-"*Enter One Time Password*"}
+_expect_otpkey=${OPENVPN_EXPECT_OTPKEY:-"*Enter Authenticator Code*"}
 
 [[ $(id -u) != 0 ]] && echo "\nNeed to be root!" && exit -1
 
