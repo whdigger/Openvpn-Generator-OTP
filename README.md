@@ -26,6 +26,14 @@ sudo apt-get install oath-toolkit expect
 
 # Centos
 sudo dnf install -y oath-toolkit expect
+
+# Build from source
+wget https://download.savannah.nongnu.org/releases/oath-toolkit/oath-toolkit-2.6.12.tar.gz
+tar -xzvf oath-toolkit-2.6.12.tar.gz
+cd oath-toolkit-2.6.12
+./configure
+make
+sudo make install
 ```
 
 Create service
